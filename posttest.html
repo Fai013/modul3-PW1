@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artikel</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .main-container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px 0px;
+    }
+
+    .main-content {
+      display: flex;
+      gap: 10px;
+    }
+
+    .main-content-img img {
+      border: 1px solid black;
+      padding: 10px;
+    }
+
+    .main-content-text {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .main-content-text div {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .main-content-text h2 {
+      border: 1px solid black;
+    }
+
+    .main-content-text p {
+      padding: 40px 0px;
+      border: 1px solid black;
+    }
+
+    .main-content-text button {
+      width: 200px;
+      align-self: flex-end;
+    }
+
+    .full-article {
+      display: none;
+      padding: 20px 0;
+      border: 1px solid black;
+      margin-top: 20px;
+    }
+  </style>
+  <body>
+    <section class="main-container">
+      <div class="main-content">
+        <div class="main-content-img">
+          <img src="thejahat.jpg" alt="" width="300" />
+        </div>
+        <div class="main-content-text">
+          <div>
+            <h2>The Jahats Crew</h2>
+            <p>
+              Sebuah perkumpulan pemuda pemudi yang berasal dari Kabupaten Majalengka, Terletak di daerah Talaga.
+              The Jahat terbentuk pada saat TM saat akan masuk Universitas Kuningan, sejak saat ini The Jahat telah memasuki usia 2 tahun.
+            </p>
+          </div>
+          <button onclick="toggleArticle()">Baca selengkapnya</button>
+        </div>
+      </div>
+
+      <!-- Artikel Lengkap -->
+      <div class="full-article" id="fullArticle">
+        <h2></h2>
+        <p>
+          The Jahat Crew merupakan komunitas yang dibentuk oleh sekelompok pemuda dan pemudi yang berbakat dan bersemangat
+          dalam berbagai kegiatan sosial dan budaya. Berdiri sejak tahun 2022, komunitas ini berkembang pesat di kawasan Majalengka
+          dan sekitarnya. Kami memiliki visi untuk membangun solidaritas, kreativitas, dan kerja sama antar anggotanya untuk
+          menghadapi tantangan zaman.
+        </p>
+        <p>
+          Aktivitas utama yang dilakukan oleh The Jahat Crew antara lain adalah rekreasi, kegiatan sosial, serta
+          turut serta dalam berbagai acara seni dan budaya. Selain itu, kami juga sering melakukan kunjungan ke berbagai tempat
+          untuk mempelajari budaya lokal dan membagikan ilmu pengetahuan kepada masyarakat luas.
+        </p>
+        <p>
+          Sejak berdirinya, The Jahat Crew telah sukses mengadakan berbagai acara dan program yang sangat bermanfaat bagi
+          anggota maupun masyarakat sekitar. Kami berkomitmen untuk terus berkembang dan memberikan dampak positif kepada
+          lingkungan dan masyarakat.
+        </p>
+      </div>
+    </section>
+
+    <script>
+      function toggleArticle() {
+        const article = document.getElementById('fullArticle');
+        const button = document.querySelector('button');
+
+        if (article.style.display === 'none' || article.style.display === '') {
+          article.style.display = 'block';
+          button.innerHTML = 'Tutup Artikel';
+        } else {
+          article.style.display = 'none';
+          button.innerHTML = 'Baca selengkapnya';
+        }
+      }
+    </script>
+  </body>
+</html>

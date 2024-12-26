@@ -1,0 +1,12 @@
+.container{
+    background-color: black;
+    width: 10px;
+    height: auto;
+    display: flex;
+    justify-content: left;
+    align-items:left ;
+    height: 80vh; 
+}
+.content{
+    text-align: right;
+}
